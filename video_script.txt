@@ -1,0 +1,128 @@
+Judul Video: Showcase Aplikasi Ujian Online (SIMUJOL) - Dibangun dengan Laravel
+
+-------------------------------------------------------------------
+[MUSIK INTRO]
+
+**Narator:**
+"Halo semuanya, selamat datang di video showcase proyek terbaru kami! Di video kali ini, kita akan mengupas tuntas sebuah aplikasi web modern bernama SIMUJOL, atau Sistem Ujian Online."
+
+"Aplikasi ini dirancang untuk merevolusi cara ujian dilaksanakan, membuatnya lebih efisien, aman, dan mudah diakses baik bagi dosen maupun mahasiswa. Dibangun sepenuhnya menggunakan framework Laravel dengan antarmuka yang ditenagai oleh Tailwind CSS, SIMUJOL menawarkan pengalaman yang mulus dan responsif."
+
+"Mari kita selami fitur-fiturnya, dimulai dari perspektif seorang Dosen."
+
+---
+**[SCENE 1: ALUR DOSEN - PERSIAPAN UJIAN]**
+
+**Narator:**
+"Kita mulai dengan login sebagai Dosen."
+
+`[Tampilkan layar login, masukkan kredensial Dosen, dan masuk ke dasbor]`
+
+**Narator:**
+"Ini adalah dasbor utama Dosen, didesain minimalis untuk akses cepat ke semua fitur penting. Perhatikan sidebar di sebelah kiri, dengan ikon-ikon baru dan skema warna yang konsisten."
+
+"Hal pertama yang dilakukan dosen adalah mengelola mata pelajaran. Di sini, kami menerapkan sistem 'hybrid', di mana dosen tidak bisa membuat mata pelajaran secara langsung, melainkan harus mengajukannya ke Admin untuk disetujui. Mari kita coba."
+
+`[Klik menu 'Kelola Mata Pelajaran'. Tunjukkan daftar mata pelajaran yang sudah ada. Klik tombol 'Ajukan Mata Pelajaran Baru'. Isi form dengan nama mata pelajaran baru, lalu klik 'Ajukan']`
+
+**Narator:**
+"Permintaan berhasil dikirim! Statusnya kini 'pending' dan bisa kita pantau di tabel 'Riwayat Permintaan' di halaman yang sama. Ini memastikan semua mata pelajaran terverifikasi oleh Admin."
+
+"Sambil menunggu persetujuan, dosen bisa mulai mengisi 'Bank Soal'. Ini adalah perpustakaan pribadi soal-soal yang bisa digunakan kembali untuk berbagai ujian."
+
+`[Klik menu 'Bank Soal'. Tunjukkan antarmuka Bank Soal dengan ikon baru. Tambahkan satu atau dua contoh soal, satu pilihan ganda dan satu esai.]`
+
+---
+**[SCENE 2: ALUR ADMIN - PERSETUJUAN]**
+
+**Narator:**
+"Sekarang, kita beralih peran sejenak menjadi Admin untuk menyetujui permintaan mata pelajaran tadi."
+
+`[Logout dari akun Dosen, login sebagai Admin]`
+
+**Narator:**
+"Dasbor Admin memberikan gambaran umum sistem. Kita langsung menuju menu 'Permintaan MK'."
+
+`[Klik menu 'Permintaan MK'. Tunjukkan permintaan yang tadi dibuat oleh Dosen. Klik tombol 'Approve' dan konfirmasi melalui modal yang muncul]`
+
+**Narator:**
+"Dengan satu klik, mata pelajaran baru tersebut kini aktif dan siap digunakan oleh Dosen untuk membuat ujian."
+
+---
+**[SCENE 3: ALUR DOSEN - PEMBUATAN & PUBLIKASI UJIAN]**
+
+**Narator:**
+"Oke, kita kembali lagi sebagai Dosen."
+
+`[Logout dari akun Admin, login kembali sebagai Dosen]`
+
+**Narator:**
+"Sekarang mata pelajaran kita sudah disetujui, mari kita buat ujiannya. Kita masuk ke menu 'Kelola Ujian'."
+
+`[Klik menu 'Kelola Ujian'. Klik 'Buat Ujian Baru', isi detail seperti judul, deskripsi, durasi, dan pilih mata pelajaran yang baru saja disetujui. Simpan.]`
+
+**Narator:**
+"Ujian sudah dibuat, tapi statusnya masih 'draft'. Sekarang kita perlu menambahkan soal dari Bank Soal yang sudah kita siapkan tadi."
+
+`[Masuk ke halaman detail ujian, klik 'Tambah Soal dari Bank Soal', pilih beberapa soal, lalu tambahkan.]`
+
+**Narator:**
+"Setelah soal siap, saatnya mempublikasikan ujian. Proses ini akan menghasilkan sebuah token unik."
+
+`[Klik tombol 'Publish'. Tunjukkan notifikasi sukses beserta token ujian yang unik.]`
+
+**Narator:**
+"Token inilah yang akan kita bagikan kepada mahasiswa. Tapi tunggu dulu, kita juga harus menentukan siapa saja mahasiswa yang berhak mengikuti ujian ini melalui menu 'Assign Students'."
+
+`[Klik 'Assign Students'. Tunjukkan daftar mahasiswa yang terdaftar di mata pelajaran tersebut. Centang beberapa nama, lalu simpan.]`
+
+---
+**[SCENE 4: ALUR MAHASISWA - MENGERJAKAN UJIAN]**
+
+**Narator:**
+"Inilah momen yang ditunggu-tunggu, kita akan login sebagai Mahasiswa dan mencoba mengerjakan ujian."
+
+`[Logout, login sebagai Mahasiswa]`
+
+**Narator:**
+"Dasbor mahasiswa sangat simpel. Mereka bisa melihat daftar ujian yang tersedia untuk mereka. Untuk memulai, cukup klik 'Kerjakan' dan masukkan token yang diberikan dosen."
+
+`[Klik 'Kerjakan', masukkan token, dan mulai ujian.]`
+
+**Narator:**
+"Ini adalah antarmuka ujian bagi mahasiswa. Waktu berjalan di pojok atas. Mahasiswa bisa menjawab soal pilihan ganda dan mengetik jawaban untuk soal esai. Sistem ini juga dilengkapi fitur deteksi kecurangan, seperti jika mahasiswa mencoba beralih tab."
+
+`[Jawab beberapa soal. Tunjukkan proses menjawab soal pilihan ganda dan esai. Selesaikan ujian.]`
+
+**Narator:**
+"Setelah ujian selesai, mahasiswa bisa langsung melihat hasilnya di menu 'Hasil Ujian', kecuali untuk soal esai yang perlu dinilai manual oleh dosen."
+
+`[Buka menu 'Hasil Ujian', tunjukkan skor yang didapat.]`
+
+---
+**[SCENE 5: ALUR DOSEN - PENILAIAN & HASIL]**
+
+**Narator:**
+"Terakhir, kita kembali ke akun Dosen untuk memeriksa hasil dan menilai soal esai."
+
+`[Login lagi sebagai Dosen. Masuk ke 'Kelola Ujian', lalu klik tombol 'Results' pada ujian yang tadi dikerjakan.]`
+
+**Narator:**
+"Halaman ini menampilkan semua mahasiswa yang telah menyelesaikan ujian beserta skor mereka. Untuk menilai esai, kita klik 'Lihat Jawaban'."
+
+`[Klik 'Lihat Jawaban' pada salah satu mahasiswa. Scroll ke jawaban esai, baca jawabannya, lalu tandai sebagai 'Benar'.]`
+
+**Narator:**
+"Setelah dinilai, skor akhir mahasiswa akan otomatis diperbarui. Dosen juga bisa memantau log aktivitas mencurigakan dari mahasiswa selama ujian melalui menu 'Logs'."
+
+---
+**[SCENE 6: KESIMPULAN]**
+
+**Narator:**
+"Dan itulah dia, tur lengkap aplikasi Sistem Ujian Online, SIMUJOL. Dari alur pengajuan mata pelajaran yang terkontrol, manajemen bank soal yang fleksibel, proses ujian yang aman, hingga penilaian yang mudah."
+
+"Aplikasi ini adalah contoh nyata bagaimana framework Laravel dapat digunakan untuk membangun sistem yang kompleks, fungsional, dan memiliki antarmuka yang indah."
+
+"Terima kasih telah menonton. Jika Anda tertarik dengan pengembangan aplikasi seperti ini, jangan lupa tinggalkan komentar, like, dan subscribe channel ini. Sampai jumpa di proyek selanjutnya!"
+
+[MUSIK OUTRO]
